@@ -1,0 +1,125 @@
+
+.navbar{
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+
+}
+.navbar .logo{
+    width: 60px;
+}
+
+.navbar-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-links li{
+    list-style: none;
+}
+.navbar-links li a{
+    color: var(--color-gray);
+    margin: 0 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .35s ease-in-out;
+}
+.navbar-links li a:hover{
+    color: var(--color-white); 
+}
+
+.navbar-login{
+    display: flex; 
+    align-items: center;  
+}
+
+.navbar-login a{
+    color: var(--color-gray);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navbar-login div{
+    width: 1.9px;
+    height: 30px;
+    background-color: var(--color-danger);
+    margin: 0 1rem;
+}
+
+.navbar-smallscreen button{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    min-height: 20px;
+}
+.navbar-smallscreen button span{
+    width: 25px;
+    height: 1.2px;
+    background: var(--color-white);
+}
+
+.navbar-smallscreen{
+    display: none;
+}
+
+@media (max-width:980px){
+    .navbar-links{
+        display: none;  
+    }
+    .navbar-smallscreen{
+        display: flex;
+    }
+    .navbar-smallscreen_overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-black);
+        height: 100vh;
+        transition: 10s ease;
+
+        flex-direction: column;
+        z-index: 5;
+    }
+   
+      .navbar-smallscreen_overlay .overlay__close{
+        font-size: 3.9rem;
+        color: var(--color-danger);
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+      .navbar-smallscreen-links {
+        list-style: none;
+      }
+
+      .navbar-smallscreen-links li{
+        margin: 2rem;
+        color: var(--color-danger);
+        font-family: cursive;
+        font-size: 2rem;
+      }
+      .navbar-smallscreen-links a{
+        color: var(--color-danger);
+        text-decoration: none;
+        transition: .3s ease-in-out;
+      }
+      .navbar-smallscreen-links a:hover{
+        color: var(--color-gray);
+      }
+
+}
+ @media (max-width:750px){
+    .navbar-login{
+        display: none;
+    }
+    .navbar{
+        padding: 1rem;
+    }
+ }
